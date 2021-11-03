@@ -11,7 +11,7 @@ import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 
-class GetCoin @Inject constructor(
+class GetCoinUseCase @Inject constructor(
     private val repository: CoinRepository
 ) {
     operator fun invoke(coinId: String): Flow<Resource<CoinDetail>> = flow {
