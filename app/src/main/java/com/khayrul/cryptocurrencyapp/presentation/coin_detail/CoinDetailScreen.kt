@@ -38,8 +38,8 @@ fun CoinDetailScreen(
                     ) {
                         Text(
                             text = "${coin.rank}. ${coin.name} (${coin.symbol})",
-                            style = MaterialTheme.typography.h2,
-                            modifier = Modifier.weight(8f)
+                            style = MaterialTheme.typography.h4,
+                            modifier = Modifier.weight(5f)
                         )
                         Text(
                             text = if(coin.isActive) "active" else "inactive",
@@ -59,7 +59,7 @@ fun CoinDetailScreen(
                     Spacer(modifier = Modifier.height(15.dp))
                     Text(
                         text = "Tags",
-                        style = MaterialTheme.typography.h3
+                        style = MaterialTheme.typography.h5
                     )
                     Spacer(modifier = Modifier.height(15.dp))
                     FlowRow(
@@ -74,7 +74,7 @@ fun CoinDetailScreen(
                     Spacer(modifier = Modifier.height(15.dp))
                     Text(
                         text = "Team members",
-                        style = MaterialTheme.typography.h3
+                        style = MaterialTheme.typography.h5
                     )
                     Spacer(modifier = Modifier.height(15.dp))
                 }

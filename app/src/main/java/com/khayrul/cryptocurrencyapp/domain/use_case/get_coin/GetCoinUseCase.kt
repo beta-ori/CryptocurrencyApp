@@ -18,7 +18,7 @@ class GetCoinUseCase @Inject constructor(
         try {
             emit(Resource.Loading<CoinDetail>())
             val coin = repository.getCoinById(coinId).toCoinDetail()
-            emit(Resource.Success(coin))
+            emit(Resource.Success<CoinDetail>(coin))
         } catch (e: HttpException) {
              emit(Resource.Error<CoinDetail>(e.localizedMessage ?: "Something went wrong"))
         } catch (e: IOException) {
